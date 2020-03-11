@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingBottom="10dp"
+    android:layout_height="match_parent"
+    tools:context=".Activities.ProfileActivity"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <ImageView
+            android:id="@+id/imgPerson"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="154dp"
+            android:layout_marginTop="198dp"
+            android:layout_marginEnd="156dp"
+            android:src="@android:drawable/ic_menu_camera">
+        </ImageView>
+
+        <LinearLayout
+            android:id="@+id/lyActions"
+            android:layout_marginTop="2dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_below="@id/imgPerson"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:id="@+id/btnEdit"
+                android:layout_marginRight="12dp"
+                android:background="@android:color/transparent"
+                android:layout_width="wrap_content"
+                android:pointerIcon="hand"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_edit_black_30dp"
+                android:text="Editar"
+                >
+            </ImageButton>
+            <ImageButton
+                android:id="@+id/btnDelete"
+                android:pointerIcon="hand"
+                android:layout_marginRight="12dp"
+                android:background="@android:color/transparent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_delete_black_30dp"
+                >
+            </ImageButton>
+            <ImageButton
+                android:id="@+id/btnSave"
+                android:pointerIcon="hand"
+                android:background="@android:color/transparent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_save_black_30dp"
+                >
+            </ImageButton>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lyInformation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="10dp"
+            android:layout_below="@+id/lyActions"
+            android:orientation="vertical">
+            <EditText
+                android:id="@+id/edtxtName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Name">
+            </EditText>
+
+            <EditText
+                android:id="@+id/edtxtCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edtxtName"
+                android:layout_marginTop="10dp"
+                android:hint="City">
+            </EditText>
+
+            <EditText
+                android:id="@+id/edtxtPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edtxtCity"
+                android:layout_marginTop="10dp"
+                android:hint="Password"
+                android:inputType="textPassword">
+            </EditText>
+        </LinearLayout>
+
+</RelativeLayout>
